@@ -60,6 +60,26 @@ def permutation(n, r):
 def permutation_with_repetition(n, r):
     return n ** r  # n raised to the power of r
 
+def tiem():
+    time.sleep(1)
+
+def dots():
+    print(".", flush=True, end='')
+    tiem()
+    print(".", flush=True, end='')
+
+def animation():
+    print("Calculating"+".", flush=True, end='')
+    tiem()
+    print(".", flush=True, end='')
+    tiem()
+    print(".\n", flush=True, end='')
+    tiem()
+
+pi = 3.14159
+
+
+
 
 def calculator():
     print(Fore.WHITE + "Welcome to the Area Calculator 2000!")
@@ -83,6 +103,12 @@ def calculator():
     print(Fore.GREEN + "7." + Fore.WHITE + " Triangle")
     
     print(Fore.GREEN + "8." + Fore.WHITE + " Square")
+    
+    print(Fore.GREEN + "9." + Fore.WHITE + " Trapezoid")
+    
+    print(Fore.GREEN + "10." + Fore.WHITE + " Factorial")
+    
+    print(Fore.GREEN + "11." + Fore.WHITE + " 3D shapes")
 
     print(Fore.CYAN + "------------------------------------")
 
@@ -92,16 +118,15 @@ def calculator():
     # Handle user's choice
     if choice == "1":
         # Circle Area Calculation
-        print(Fore.WHITE + "\nYou chose to calculate the area of a Circle.")
+
         diameter = int(input(Fore.WHITE + "Enter the diameter of the circle: " + Fore.MAGENTA))
         radius = diameter / 2
-        pi = 3.14
 
-        print(Fore.WHITE + "\nCalculating the" + Fore.GREEN + " area " + Fore.WHITE + "of a" + Fore.BLUE + " Circle" + Fore.WHITE + ", Please be patient...")
-        time.sleep(3)
 
         area_circle = (radius ** 2) * pi
         perimeter_circle = diameter * pi
+
+        animation()
 
         print("-------------------------------------------------------------------" + Fore.WHITE + "\nThe " + Fore.GREEN + "area" + Fore.WHITE + " of the circle is: " + Fore.BLUE + str(area_circle))
         print("-------------------------------------------------------------------" + Fore.WHITE + "\nThe " + Fore.GREEN + "perimeter" + Fore.WHITE + " of the circle is: " + Fore.BLUE + str(perimeter_circle) + Fore.WHITE)
@@ -112,8 +137,7 @@ def calculator():
         length = int(input(Fore.WHITE + "Enter the length of the rectangle: " + Fore.MAGENTA))
         width = int(input(Fore.WHITE + "Enter the width of the rectangle: " + Fore.MAGENTA))
 
-        print(Fore.WHITE + "\nCalculating the" + Fore.GREEN + " area " + Fore.WHITE + "of a" + Fore.BLUE + " Rectangle" + Fore.WHITE + ", Please be patient...")
-        time.sleep(3)
+        animation()     #print(Fore.WHITE + "\nCalculating the" + Fore.GREEN + " area " + Fore.WHITE + "of a" + Fore.BLUE + " Rectangle" + Fore.WHITE + ", Please be patient...")
 
         area_rectangle = length * width
         perimeter_rectangle = 2 * (length + width)
@@ -127,8 +151,7 @@ def calculator():
         Qdiagonal = int(input(Fore.WHITE + "Please enter the" + Fore.YELLOW + " Bigger Diagonal: " + Fore.MAGENTA))
         side_rhombus = int(input(Fore.WHITE + "Please enter the" + Fore.YELLOW + " Side " + Fore.WHITE + "of the Rhombus: " + Fore.MAGENTA))
 
-        print(Fore.WHITE + "\nCalculating the" + Fore.GREEN + " area " + Fore.WHITE + "of a" + Fore.BLUE + " Rhombus" + Fore.WHITE + ", Please be patient...")
-        time.sleep(3)
+        animation()
 
         area_rhombus = int((Pdiagonal * Qdiagonal)) / 2
         perimeter_rhombus = int(side_rhombus * 4)
@@ -141,8 +164,7 @@ def calculator():
         n = int(input(Fore.WHITE + "Enter the number of " + Fore.YELLOW + "Items: " + Fore.MAGENTA))
         r = int(input(Fore.WHITE + "Enter the number of " + Fore.YELLOW + "Slots: " + Fore.MAGENTA))
 
-        print(Fore.WHITE + "\nCalculating the" + Fore.GREEN + " Combinations")
-        time.sleep(3)
+        animation()
 
         combination_ = combination(n, r)
 
@@ -156,8 +178,7 @@ def calculator():
         N = int(input(Fore.WHITE + "Enter the number of " + Fore.YELLOW + "Items: " + Fore.MAGENTA))
         R = int(input(Fore.WHITE + "Enter the number of " + Fore.YELLOW + "Slots: " + Fore.MAGENTA))
 
-        print(Fore.WHITE + "\nCalculating the" + Fore.GREEN + " Permutations")
-        time.sleep(3)
+        animation()
 
         permutation_ = permutation(N, R)
 
@@ -170,8 +191,7 @@ def calculator():
         nn = int(input(Fore.WHITE + "Enter the number of " + Fore.YELLOW + "Items: " + Fore.MAGENTA))
         rr = int(input(Fore.WHITE + "Enter the number of " + Fore.YELLOW + "Slots: " + Fore.MAGENTA))
 
-        print(Fore.WHITE + "\nCalculating the" + Fore.GREEN + " Permutations")
-        time.sleep(3)
+        animation()
 
         permutation_with_reputition = permutation_with_repetition(nn, rr)
 
@@ -189,8 +209,7 @@ def calculator():
         time.sleep(1)
         print(Fore.WHITE+"To calculate the " + Fore.GREEN + "perimeter " + Fore.WHITE + "of the " + Fore.BLUE + "Triangle" + Fore.WHITE + " , just add the value of the sides altogahter!")
         time.sleep(0.5)
-        print(Fore.WHITE + "\nCalculating the" + Fore.GREEN + " area " + Fore.WHITE + "of a" + Fore.BLUE + " Triangle" + Fore.WHITE + ", Please be patient...")
-        time.sleep(5)
+        animation()
 
         print(Fore.RED + "--------------------------------------------------------------------------"+Fore.WHITE + 
               "\nthe" + Fore.GREEN + " area " + Fore.WHITE + "of the Triangle is: " + Fore.GREEN + str(area_triangle))
@@ -203,12 +222,111 @@ def calculator():
         area_square = side_square ** 2
         perimeter_square = side_square * 4
 
-        print(Fore.WHITE + "\nCalculating the" + Fore.GREEN + " area " + Fore.WHITE + "of a" + Fore.BLUE + " Square" + Fore.WHITE + ", Please be patient...")
-        time.sleep(5)
+        animation()
 
         print(Fore.RED + "--------------------------------------------------------------------------"+Fore.WHITE + 
               "\nthe" + Fore.GREEN + " area " + Fore.WHITE + "of the Square is: " + Fore.GREEN + str(area_square)+
               Fore.WHITE+"\nthe" + Fore.GREEN + " perimeter " + Fore.WHITE + "of the Square is: " + Fore.GREEN + str(perimeter_square))
+        
+    elif choice == "9":
+        height_trapezoid = int(input(Fore.WHITE + "Enter the " + Fore.GREEN + "height" + Fore.WHITE + "of the " + Fore.BLUE + "Trapezoid: "))
+        BASE_trapezoid = int(input(Fore.WHITE + "Enter the " + Fore.GREEN + "bigger base " + Fore.WHITE + "of the " + Fore.BLUE + "Trapezoid: "))
+        base_trapezoid = int(input(Fore.WHITE + "Enter the " + Fore.GREEN + "smaller base " + Fore.WHITE + "of the " + Fore.BLUE + "Trapezoid: "))
+        base_trapezoid_3 = int(input(Fore.WHITE + "Enter the " + Fore.GREEN + "3rd base " + Fore.WHITE + "of the " + Fore.BLUE + "Trapezoid: "))
+        side_trapezoid = int(input(Fore.WHITE + "Enter the " + Fore.GREEN + "Side " + Fore.WHITE + "of the " + Fore.BLUE + "Trapezoid: "))
+
+        area_trapezoid = int(BASE_trapezoid + base_trapezoid) * (height_trapezoid / 2)
+        perimeter_trapezoid = int(BASE_trapezoid + base_trapezoid) + (side_trapezoid + base_trapezoid_3)
+
+        animation()
+
+        print(Fore.RED + "--------------------------------------------------------------------------"+Fore.WHITE + 
+              "\nthe" + Fore.GREEN + " area " + Fore.WHITE + "of the Trapezoid is: " + Fore.GREEN + str(area_trapezoid)+
+              Fore.WHITE+"\nthe" + Fore.GREEN + " perimeter " + Fore.WHITE + "of the Trapezoid is: " + Fore.GREEN + str(perimeter_trapezoid))
+        
+    elif choice == "10":
+        factorial1 = int(input("Enter a number: " + Fore.MAGENTA))
+
+        factorated = math.factorial(factorial1)
+
+        animation()
+
+        print("------------------------------------------------------------------\n" + Fore.WHITE + "the factoration of " + Fore.YELLOW + str(factorial1) + Fore.WHITE + " is: " + Fore.GREEN + str(factorated))
+
+    elif choice == "11":
+        print("Choose your 3D shape:")
+
+        print(Fore.GREEN + "1. " + Fore.WHITE + "Cube")
+        print(Fore.GREEN + "2. " + Fore.WHITE + "Sphere")
+        print(Fore.GREEN + "3. " + Fore.WHITE + "Tetrahedrum (3D triangle)")
+        print(Fore.GREEN + "4. " + Fore.WHITE + "cylinder")
+
+        choice_3D = input(Fore.YELLOW + "Enter your choice: ")
+
+        if choice_3D == '1':
+            cube_length = int(input(Fore.WHITE + "Enter the length: " + Fore.MAGENTA))
+            cube_width = int(input(Fore.WHITE + "Enter the width: " + Fore.MAGENTA))
+            cube_height = int(input(Fore.WHITE + "Enter the height: " + Fore.MAGENTA))
+
+            cube_area = (cube_length * cube_width) * cube_height
+            # cube_P = ((cube_length + cube_width) * 2) + (cube_height * 4)
+            cube_P = 4 * (cube_length + cube_width + cube_height)
+
+            animation()
+
+            print(Fore.RED + "--------------------------------------------------------------------------"+Fore.WHITE + 
+              "\nthe" + Fore.GREEN + " area " + Fore.WHITE + "of the Cube is: " + Fore.GREEN + str(cube_area)+
+              Fore.WHITE+"\nthe" + Fore.GREEN + " perimeter " + Fore.WHITE + "of the Cube is: " + Fore.GREEN + str(cube_P))
+            
+        elif choice_3D == '2':
+            Sphere_radius = int(input(Fore.WHITE + "Enter the radius of the Sphere: " + Fore.MAGENTA))
+
+            sphere_Value_V = ((4 / 3) * pi * (Sphere_radius ** 3))
+            sphere_V = round(sphere_Value_V, 2)
+            sphere_Value_P = 4 * pi * (Sphere_radius ** 2)
+            sphere_P = round(sphere_Value_P, 2)
+            
+
+            animation()
+
+            print(Fore.RED + "--------------------------------------------------------------------------"+Fore.WHITE + 
+              "\nthe" + Fore.GREEN + " Volume " + Fore.WHITE + "of the Sphere is: " + Fore.GREEN + str(sphere_V)+
+              Fore.WHITE+"\nthe" + Fore.GREEN + " surface area " + Fore.WHITE + "of the Sphere is: " + Fore.GREEN + str(sphere_P))
+
+
+        elif choice_3D == '3':
+            edge_Tetra = int(input(Fore.WHITE+"Enter the edge of the tetrahedrum or whatever: " + Fore.MAGENTA))
+            tetra_volume = (edge_Tetra ** 3) / (6 * (math.sqrt(2)))
+            tetra_surface = (math.sqrt(3)) * (edge_Tetra ** 2)
+
+            animation()
+
+            print(Fore.RED + "--------------------------------------------------------------------------"+Fore.WHITE + 
+              "\nthe" + Fore.GREEN + " Volume " + Fore.WHITE + "of the Tetrahedrum is: " + Fore.GREEN + str(tetra_volume)+
+              Fore.WHITE+"\nthe" + Fore.GREEN + " surface area " + Fore.WHITE + "of the Tetrahedrium is: " + Fore.GREEN + str(tetra_surface))
+        
+
+        elif choice_3D == '4':
+            radius_cyl = int(input(Fore.WHITE+"Enter the radius of the cylinder: " + Fore.MAGENTA))
+            height_cyl = int(input(Fore.WHITE+"Enter the height of the cylinder: " + Fore.MAGENTA))
+
+            volume_cyl = (pi * (radius_cyl ** 2)) * height_cyl
+            surface_cyl = 2 * (pi * radius_cyl * height_cyl) + (2 * pi * (radius_cyl ** 2))
+
+            animation()
+
+            print(Fore.RED + "--------------------------------------------------------------------------"+Fore.WHITE + 
+              "\nthe" + Fore.GREEN + " Volume " + Fore.WHITE + "of the Cylinder is: " + Fore.GREEN + str(volume_cyl)+
+              Fore.WHITE+"\nthe" + Fore.GREEN + " surface area " + Fore.WHITE + "of the Cylinder is: " + Fore.GREEN + str(surface_cyl))
+        
+
+
+            
+        else:
+            print(Fore.RED + "Invalid value. choose between 1, 2, 3, etc.")
+            
+        
+
 
 
     
@@ -216,7 +334,7 @@ def calculator():
 
     else:
         # Invalid choice
-        print(Fore.RED + "Invalid choice. Please enter either 1, 2, 3, 4, 5, 6, 7 or 8." + Fore.WHITE + "\nDONT USE THIS AGAIN STUPID AHH GUY")  
+        print(Fore.RED + "Invalid choice. Please enter either 1, 2, 3, etc." + Fore.WHITE + "\nDONT USE THIS AGAIN STUPID AHH GUY")  
 
     print(Fore.CYAN + "\nThank you for using the Area Calculator 2000!" + Fore.RESET)
 
@@ -231,7 +349,7 @@ while True:
     # Ask the user if they want to restart or exit
     restart = input(Fore.WHITE + "\nDo you want to restart the calculator? (yes/no): " + Fore.YELLOW).lower()
 
-    if restart != 'yes':
+    if restart != "yes":
         print(Fore.CYAN + "\nThank you for using the Area Calculator 2000!")
         break  # Exit the loop if the user doesn't want to restart
 
